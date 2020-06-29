@@ -80,7 +80,7 @@ export default class GameScene extends Phaser.Scene {
       // Collision for coin is set on each element, not the whole group
       var coinChildren = this.staticObjects.coin.getChildren();
       for(var i=0; i<coinChildren.length;i++){
-        var coin: Phaser.GameObjects.Sprite = coinChildren[i];
+        var coin = <Phaser.GameObjects.Sprite>coinChildren[i];
         this.physics.overlap(this.character,coin,function(){this.bonusPoint(coin)},null,this);
       }
 

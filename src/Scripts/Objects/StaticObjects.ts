@@ -1,5 +1,4 @@
 import * as Phaser from "phaser";
-import BladesGroup, { Blade } from "./Blade";
 
 export default class StaticObjects{
     public grounds: Phaser.GameObjects.TileSprite[] = [null,null];
@@ -31,7 +30,7 @@ export default class StaticObjects{
       for(var i=0;i<2;i++){
         scene.add.existing(this.grounds[i]);
         var layer = scene.physics.add.existing(this.grounds[i]);
-        var layerBody: Phaser.Physics.Arcade.Body = layer.body;
+        var layerBody= <Phaser.Physics.Arcade.Body>layer.body;
         layerBody.allowGravity = false;
         layerBody.immovable = true;
         this.grounds[i].depth = 10;
@@ -81,8 +80,8 @@ export default class StaticObjects{
       this.coin.setDepth(10);
       var coinChildren = this.coin.getChildren();
       for(var i=0; i<coinChildren.length;i++){
-        var coin: Phaser.GameObjects.Sprite = coinChildren[i];
-        var coinBody: Phaser.Physics.Arcade.Body = coin.body;
+        var coin = <Phaser.GameObjects.Sprite>coinChildren[i];
+        var coinBody = <Phaser.Physics.Arcade.Body>coin.body;
         coinBody.setSize(coinBody.width/2,coinBody.height/2);
       }
 
