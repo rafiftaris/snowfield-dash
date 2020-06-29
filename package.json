@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
-    "start": "npm install & webpack --watch && live-server --port=8085",
+    "start": "npm install && webpack && live-server --port=8085",
     "dev": "live-server --port=8085",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
