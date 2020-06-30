@@ -8,7 +8,7 @@ const DEFAULT_WIDTH = 1200;
 const DEFAULT_HEIGHT = 720;
 
 const config: GameConfig = {
-  title: "Starfall",
+  title: "Snowfield Dash",
   scale:{
     parent: "game",
     mode: Phaser.Scale.FIT,
