@@ -14,8 +14,9 @@ module.exports = {
     extensions: [ '.ts', '.tsx', '.js' ]
   },
   output: {
-    filename: 'app.js',
-    path: path.resolve(__dirname, 'dist')
+    path: __dirname,
+    publicPath: '/',
+    filename: 'app.js'
   },
   mode: 'development'
 };

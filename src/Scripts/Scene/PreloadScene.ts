@@ -1,5 +1,4 @@
 import * as Phaser from "phaser";
-import Character from "../Objects/Character";
 
 export default class PreloadScene extends Phaser.Scene {
     constructor(){
